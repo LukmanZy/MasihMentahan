@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
 }
@@ -39,13 +38,14 @@ body {
   box-sizing: border-box;
 }
 
-.showcase::before {
+.showcase::before, 
+.carousel::before{
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 300px;
+  height: 111px;
   z-index: 888;
   background: linear-gradient(to top, #111, transparent);
 }
@@ -110,16 +110,17 @@ body {
 .info-panel {
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
   border-radius: 12px;
-  margin-top: -80px !important;
   background-color: white;
-  padding: 15px;
   z-index: 999;
 }
-.info-panel h1{
-  font-size: 50px;
+.info-panel h1 {
+  font-size: 30px;
   text-transform: uppercase;
   font-weight: bold;
   margin-top: 7px;
+}
+.info-panel p {
+  font-size: 14px
 }
 .info-panel .text-center {
   font-family: 'Viga', sans-serif;
@@ -179,11 +180,11 @@ body {
 
 /*---------------------- Destinasi Pilihan -------------------------*/
 .conta {
-    padding-top: 30px;
-    position: relative;
-    width: 100%;
-    padding-bottom: 30px;
-  }
+  padding-top: 30px;
+  position: relative;
+  width: 100%;
+  padding-bottom: 30px;
+}
 .containerDestinasi {
   margin: auto;
   margin-top: 10px;
@@ -275,14 +276,17 @@ body {
   box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
 }
 
+/* -----------------------Detail Page------------------------ */
+.carousel-inner img {
+  height: 300px;
+}
+
 /* Utility */
 .tombol {
   text-transform: uppercase;
   border-radius: 45px !important;
   padding: 6px 23px !important;
 }
-
-
 
 /* ----------------------------------------------------------------- */
 /* Screen Desktop (desktops, 992px and up) */
@@ -305,6 +309,10 @@ body {
   .showcase {
     padding: 100px;
   }
+  .showcase::before,
+  .carousel::before {
+  height: 300px;
+  }
 
   .text h2 {
     font-size: 60px;
@@ -312,12 +320,24 @@ body {
   .text h3 {
     font-size: 40px;
   }
+  .text p {
+    font-size: 14px;
+  }
   .text a {
     padding: 10px 30px;
   }
   .text a:hover {
     text-decoration: none !important;
     padding: 15px 35px;
+  }
+  .info-panel {
+  margin-top: -80px !important;
+  }
+  .info-panel h1 {
+    font-size: 45px;
+  }
+  .info-panel p {
+    font-size: 16px;
   }
   .peta {
     margin-top: -120px;
@@ -329,10 +349,14 @@ body {
   }
 
   /* About Us */
-  .contaAbout{
+  .contaAbout {
     display: flex;
   }
   .aboutUs {
-  display: flex;
+    display: flex;
+  }
+
+  .carousel-inner img {
+    height: 900px;
   }
 }
