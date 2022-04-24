@@ -144,7 +144,7 @@ body {
   flex: 0.4;
   text-align: right;
 }
-.caption h2 {
+.caption h2, .contact h2 {
   color: #edf0f1;
   font-size: 40px;
   font-family: 'Viga', sans-serif;
@@ -158,29 +158,65 @@ body {
 .contact a i {
   font-size: 20px;
 }
-.aboutUs {
-  padding: 20px 3px;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  bottom: 0;
+
+/* Kontak Form */
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  width: 100%;
+  display: grid;
+  row-gap: 1rem;
 }
-.aboutUs h2 {
-  color: #d25400;
-  font-size: 20px;
-  font-weight: 300;
-  text-transform: capitalize;
-  line-height: 1px;
+.contact-form input, .contact-form textarea {
+  border: none;
+  outline: none;
+  font-size: 13px;
+  padding: 15px;
+  color: #eaeaea;
+  background: #030303;
+  border-radius: 7px;
 }
-.aboutUs p {
-  color: #fff;
-  max-width: 500px;
-  margin: 10px auto;
-  line-height: 28px;
+.contact-form .send-btn {
+  width: 100px;
   font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 8px;
+  background: #eaeaea;
+  color: #030303;
+  cursor: pointer;
+}
+.contact-form .send-btn:hover {
+  background: #030303;
+  color: #eaeaea;
+  transition: .3s all linear;
 }
 
+/* Footer */
+footer {
+  position: static;
+  background: #0d1319;
+  height: auto;
+  color: #fff;
+  bottom: 0;
+}
+.footerBottom {
+  background: #000;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+}
+.footerBottom p {
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+.footerBottom span {
+  text-transform: uppercase;
+  opacity: 0.4;
+  font-weight: 200;
+}
 /*---------------------- Destinasi Page -------------------------*/
 .conta {
   padding-top: 30px;
@@ -283,7 +319,6 @@ body {
 .carousel-inner img {
   height: 300px;
 }
-
 /* Isi */
 .isiDestinasi {
   margin: 0 89px;
